@@ -26,14 +26,15 @@ import {
 import { Router, Stack, Scene } from 'react-native-router-flux';
 import Dizi from './Dizi';
 import JSON from './JSON';
+import LifeCycles from "./LifeCycles"
 
 const App: () => React$Node = () => {
   return (
     <Router>
     <Stack  key='root'>
-     <Scene key = 'JSON'
-          component = {JSON}
-          title = 'JSON'
+     <Scene key = 'LifeCycles'
+          component = {LifeCycles}
+          title = 'LifeCycles'
           hideNavBar
           />
     </Stack>

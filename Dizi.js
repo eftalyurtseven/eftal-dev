@@ -51,15 +51,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#fff",
   },
-  input: {
-    borderWidth: 0.5,
-    width: "100%",
-    alignItems: "center",
-    borderColor: "#ccc",
-    borderRadius: 50,
-    color: "red",
-    height: 55,
-  },
 });
 
 //make this component available to the app

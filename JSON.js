@@ -13,11 +13,14 @@ class JSON extends Component {
       age: 21,
       favoriteFood: "Tavuk Pilav",
     };
-     var obj = JSON.parse(myObj);
-console.log(obj);
+
+//JSON.stringify veriyi json formatına dönüştürmek için kullanırız.Dönüştürdüğümüz veriyi başka bir dile göndererek artık oradaki json komutlarıyla okuyabiliriz.
+ //console.log(JSON.stringify(myObj));
+//JSON.parse json olarak gelen veriyi okumamıza yarar.
+//console.log(JSON.parse(myObj));
     return (
       <View style={styles.container}>
-        <Text></Text>
+        <Text>sss</Text>
       </View>
     );
   }
