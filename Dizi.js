@@ -1,6 +1,16 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { Header, Right, Left, Body } from "native-base";
+import { Actions } from "react-native-router-flux";
+import Icon from "react-native-vector-icons/FontAwesome";
+import LifeCycles from "./MyLifeCycles";
 
 // Dizi : Dizi benzer ifadelerin bir araya getirildiği özel değişkendir. Bir değişken içinde bir veri saklana bilirken, dizilerde birden fazla veri saklamak mümkündür.
 
@@ -19,6 +29,17 @@ class Dizi extends Component {
     name.push(this.state.son);
     return (
       <View style={styles.container}>
+         <Header style={styles.Header}>
+        <Body>
+          <Text style={styles.text} numberOfLines={1}>
+            {this.props.title}
+          </Text>
+        </Body>
+        <Right>
+        <TouchableOpacity onPress={() => Actions.MyLifeCycles()}>
+            <Icon name="chevron-right" size={30} color="black" />
+          </TouchableOpacity></Right>
+      </Header>
         <TextInput
           style={{ height: 40 }}
           placeholder="Cümlenin sonuna yazınız!"
@@ -50,6 +71,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
+  },
+
+   Header: {
+    width: "100%",
+    backgroundColor:"white",
   },
 });
 

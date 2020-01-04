@@ -1,6 +1,10 @@
 //import liraries
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Actions } from "react-native-router-flux";
+import Icon from "react-native-vector-icons/FontAwesome";
+import MyCarousel from "./MyCarousel";
+import MyJson from "./MyJson"
 
 /*componentWillMount = () =>{
                                 => Render işleminden hemen önceki tetiklenir.
@@ -35,7 +39,7 @@ componentDidUpdate = () => {
 
 */
 // create a component
-class LifeCycles extends Component {
+class MyLifeCycles extends Component {
   constructor(props) {
     super(props);
     this.state = { date: new Date(), cnt: 10 };
@@ -68,6 +72,9 @@ class LifeCycles extends Component {
   render() {
     return (
       <View style={styles.container}>
+      <TouchableOpacity onPress={() => Actions.MyJson()} style={styles.icon}>
+          <Icon name="chevron-right" size={40} color="black" />
+        </TouchableOpacity>
         <Text>LifeCycles</Text>
         <Text>Saat Şuanda: {this.state.date.toLocaleTimeString()}.</Text>
         <Text> Saatin Durması İçin Kalan {this.state.cnt}</Text>
@@ -87,7 +94,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#fff",
   },
+  icon: {
+    alignItems: "flex-end",
+    margin:10,
+  },
 });
 
 //make this component available to the app
-export default LifeCycles;
+export default MyLifeCycles;

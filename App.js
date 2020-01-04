@@ -25,17 +25,34 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import { Router, Stack, Scene } from 'react-native-router-flux';
 import Dizi from './Dizi';
-import JSON from './JSON';
-import LifeCycles from "./LifeCycles"
+import MyJson from './MyJson';
+import MyLifeCycles from "./MyLifeCycles"
+import MyCarousel from "./MyCarousel"
 
 const App: () => React$Node = () => {
   return (
     <Router>
     <Stack  key='root'>
-     <Scene key = 'LifeCycles'
-          component = {LifeCycles}
-          title = 'LifeCycles'
+     <Scene key = 'MyCarousel'
+          component = {MyCarousel}
+          title = 'MyCarousel'
           hideNavBar
+          />
+          <Scene key = 'Dizi'
+          component = {Dizi}
+          title = 'Dizi'
+          hideNavBar
+          />
+          <Scene key = 'MyLifeCycles'
+          component = {MyLifeCycles}
+          title = 'MyLifeCycles'
+          hideNavBar
+          />
+          <Scene key = 'MyJson'
+          component = {MyJson}
+          title = 'MyJson'
+          hideNavBar
+          //initial ={true}
           />
     </Stack>
     </Router>
