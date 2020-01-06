@@ -53,10 +53,7 @@ class MyCarousel extends Component {
       ],
       modalVisible: false,
     };
-  }
-  handleChange = index => {
-    this.setState({ currentIndex: index });
-  };
+
   renderItem({ item, index }, parallaxProps) {
     console.log("index", index);
     return (
